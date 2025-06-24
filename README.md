@@ -50,8 +50,8 @@ A dedicated `screenshots/` folder has been added to this repository containing 7
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
-   cd movie-website
+   git clone <https://github.com/saikiran9346/movie-finder-website>
+   cd movie-finder-website
    ```
 2. **Install dependencies:**
    ```bash
