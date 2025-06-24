@@ -25,7 +25,7 @@ Dive into the world of cinema with MovieXplorer—a React-powered, Netflix-inspi
 
 ## 🖼️ UI Preview
 
-A dedicated `screenshots/` folder has been added to this repository containing 7 images (`sc1.png`, `sc2.png`, ..., `sc7.png`) that showcase the user interface and key features of the website. Feel free to browse them for a visual reference of the project.
+A dedicated `Screenshots/` folder has been added to this repository containing 6 images (`ss1.png`, `ss2.png`, ..., `ss7.png`) that showcase the user interface and key features of the website. Feel free to browse them for a visual reference of the project.
 
 ---
 
