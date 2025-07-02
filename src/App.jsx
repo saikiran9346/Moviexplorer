@@ -4,6 +4,7 @@ import './App.css';
 import SearchBar from './SearchBar';
 import MovieCard from './MovieCard';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [trending, setTrending] = useState([]);
@@ -142,7 +143,7 @@ function App() {
       <div className="movie-row-title">{title}</div>
       <div className="movie-row-cards">
         {movies.map((movie) => (
-          <div className="movie-row-card" key={movie.id}>
+          <Link to={`/movie/${movie.id}`} className="movie-row-card" key={movie.id} style={{ textDecoration: 'none', color: 'inherit' }}>
             <img
               src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450?text=No+Image'}
               alt={movie.Title}
@@ -153,7 +154,7 @@ function App() {
             {movie.vote_average && (
               <p>⭐ {movie.vote_average.toFixed(1)}/10</p>
             )}
-          </div>
+          </Link>
         ))}
       </div>
     </div>
@@ -224,7 +225,7 @@ function App() {
           </div>
         </div>
       )}
-      {/* MovieXplorer standout title */}
+      {/* MOVIEXPLORER standout title */}
       <div style={{
         display: 'flex',
         flexDirection: 'column',
@@ -243,8 +244,8 @@ function App() {
           textTransform: 'uppercase',
         }}>
           <span style={{ fontSize: '2.2rem', marginRight: 14, filter: 'drop-shadow(0 2px 6px #e50914)' }}>🎬</span>
-          <span style={{ color: '#fff' }}>MovieXplorer </span>
-          
+          <span style={{ color: '#fff' }}>MOVIEXPLORER </span>
+          <span style={{ color: '#e50914', marginLeft: 10 }}></span>
         </div>
         <div style={{
           width: 260,
@@ -289,7 +290,7 @@ function App() {
         boxShadow: '0 -2px 24px #000a',
       }}>
         <div style={{ marginBottom: 8 }}>
-          &copy; {new Date().getFullYear()} <span style={{ color: '#e50914', fontWeight: 700 }}>MovieXplorer</span>. All rights reserved.
+          &copy; {new Date().getFullYear()} <span style={{ color: '#e50914', fontWeight: 700 }}>Moviexplorer</span>. All rights reserved.
         </div>
         <div style={{ color: '#b3b3b3', fontSize: '0.95rem', maxWidth: 600, margin: '0 auto' }}>
           This product uses the TMDB API but is not endorsed or certified by TMDB or Netflix. All movie data & images © their respective owners.
@@ -298,5 +299,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
